@@ -8,19 +8,8 @@ file_sample_planets = open('src/sample_planets_for_commands')
 sample_users = json.load(file_sample_users)
 sample_planets = json.load(file_sample_planets)
 
-"""
-In this file, you can add as many commands as you want using the @app.cli.command decorator
-Flask commands are usefull to run cronjobs or tasks outside of the API but sill in integration 
-with you database, for example: Import the price of bitcoin every night as 12am
-"""
 def setup_commands(app):
-    
-    """ 
-    This is an example command "insert-test-users" that you can run from the command line
-    by typing: $ flask insert-test-users 5
-    Note: 5 is the number of users to add
-    """
-
+  
     @app.cli.command("insert-test-planets")
     def insert_test_planets():
         max_count = 2

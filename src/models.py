@@ -17,7 +17,6 @@ class Person(db.Model):
             "id": self.id,
             "name": self.name,
             "home_planet": self.home_planet,
-            # do not serialize the password, its a security breach
         }
 
 
@@ -37,7 +36,7 @@ class Planet(db.Model):
             "id": self.id,
             "name": self.name,
             "terrain": self.terrain,
-            # do not serialize the password, its a security breach
+            
         }
 
 
@@ -81,5 +80,5 @@ class Users(db.Model):
             "id": self.id,
             "name": self.name,
             "username": self.username,
-            # do not serialize the password, its a security breach
+            
         }
